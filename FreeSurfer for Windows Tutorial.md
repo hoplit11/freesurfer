@@ -1,4 +1,4 @@
-# Introduction and Installation
+# Introduction and Installation by Nathan Hostetler
 
 ## **<u>Installation notes</u>**
 
