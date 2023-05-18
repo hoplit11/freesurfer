@@ -80,7 +80,7 @@
 
 -   1\) Copy and paste this into Ubuntu.
 
-    -   sudo apt-get update
+    -   ```sudo apt-get update```
 
     -   The paste button in Ubuntu is a right click.
 
@@ -88,8 +88,7 @@
 
 -   2\) Copy and paste this into Ubuntu.
 
-    -   sudo apt-get install tcsh libfreetype6 libglu1-mesa
-        libfontconfig1 libxrender1 libsm6 libxt6
+    -   ```sudo apt-get install tcsh libfreetype6 libglu1-mesa libfontconfig1 libxrender1 libsm6 libxt6```
 
 ### **Video 3 and 10 - Install a graphics displayer [<u>https://youtu.be/3K6Z36cYWqo</u>](https://youtu.be/3K6Z36cYWqo) OR [<u>https://youtu.be/RcwKpZDobNA</u>](https://youtu.be/RcwKpZDobNA)** 
 
@@ -222,7 +221,7 @@
 
 -   #### Now, copy and paste the following into Ubuntu and press enter.
 
-    -   sudo tar -zxvf freesurfer-linux-centos7_x86_64-7.1.1.tar.gz
+    -   ```sudo tar -zxvf freesurfer-linux-centos7_x86_64-7.1.1.tar.gz```
 
     -   If it copies into Ubuntu as “otar”, remove the o. It should only
         say tar.
@@ -230,15 +229,15 @@
 -   Each subsequent step represents a separate “copy + paste into
     Ubuntu”.
 
-    -   1\) cd freesurfer
+    -   1\) ```cd freesurfer```
 
-    -   2\) pwd
+    -   2\) ```pwd```
 
-    -   3\) export FREESURFER_HOME=$HOME/freesurfer
+    -   3\) ```export FREESURFER_HOME=$HOME/freesurfer```
 
-    -   4\) export SUBJECTS_DIR=$FREESURFER_HOME/subjects
+    -   4\) ```export SUBJECTS_DIR=$FREESURFER_HOME/subjects```
 
-    -   5\) source $FREESURFER_HOME/SetUpFreeSurfer.sh
+    -   5\) ```source $FREESURFER_HOME/SetUpFreeSurfer.sh```
 
 ### **Video 5 - Obtaining a FreeSurfer License [<u>https://youtu.be/1qA3uPUOBRU</u>](https://youtu.be/1qA3uPUOBRU)** 
 
@@ -279,14 +278,12 @@
 
 -   Copy and paste the following into Ubuntu.
 
-    -   sudo gedit .bashrc
+    -   ```sudo gedit .bashrc```
 
 -   Scroll to the bottom of the resulting code-filled window. Beneath
     the final line of code, copy and paste the following:
 
-    -   alias sfs=’export FREESURFER_HOME=/home/**YOUR UBUNTU USERNAME
-        FROM EARLIER**/freesurfer ; source
-        $FREESURFER_HOME/SetUpFreeSurfer.sh’
+    -   ```alias sfs=’export FREESURFER_HOME=/home/**YOUR UBUNTU USERNAME FROM EARLIER**/freesurfer ; source $FREESURFER_HOME/SetUpFreeSurfer.sh’```
 
     -   It might not let you paste. Just type it in exactly (letter for
         letter) instead, and replace “YOUR UBUNTU …” with your username.
@@ -322,9 +319,9 @@ and then try again.
 
 -   Copy and paste the following into Ubuntu, in order:
 
-    -   1\) export SUBJECTS_DIR=$FREESURFER_HOME/subjects
+    -   1\) ```export SUBJECTS_DIR=$FREESURFER_HOME/subjects```
 
-    -   2\) source $FREESURFER_HOME/SetUpFreeSurfer.sh
+    -   2\) ```source $FREESURFER_HOME/SetUpFreeSurfer.sh```
 
 -   Now type “freeview”, “recon-all”, or whatever other command you wish
     to run.
@@ -337,14 +334,13 @@ and then try again.
 before inputting the commands. This would look something like this: (the
 website does not normally have sudo in this command)
 
-**sudo** rm -rf ${FREESURFER_HOME}/lib/qt ${FREESURFER_HOME}/lib/vtk
+```**sudo** rm -rf ${FREESURFER_HOME}/lib/qt ${FREESURFER_HOME}/lib/vtk```
 
-cp -r freesurfer/lib/qt ${FREESURFER_HOME}/lib/qt
+```cp -r freesurfer/lib/qt ${FREESURFER_HOME}/lib/qt```
 
-cp -r freesurfer/lib/vtk ${FREESURFER_HOME}/lib/vtk
+```cp -r freesurfer/lib/vtk ${FREESURFER_HOME}/lib/vtk```
 
-cp freesurfer/bin/freeview freesurfer/bin/qt.conf
-${FREESURFER_HOME}/bin/
+```cp freesurfer/bin/freeview freesurfer/bin/qt.conf ${FREESURFER_HOME}/bin/```
 
 **As a general rule, when Ubuntu tells you that “permission is denied”,
 input sudo before the command and see if it works.**
