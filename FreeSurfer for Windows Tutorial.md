@@ -145,7 +145,7 @@
 
 -   Copy and paste the following into Ubuntu.
 
-    -   cd /mnt/c/Users/***Mauricio***/Downloads
+    -   cd /mnt/c/Users/***Your Windows username***/Downloads
 
         -   Your Windows username is not the same as the Ubuntu username
             you previously created. You can find your Windows user name
