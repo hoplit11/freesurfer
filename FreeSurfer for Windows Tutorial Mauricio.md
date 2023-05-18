@@ -145,7 +145,7 @@
 
 -   Copy and paste the following into Ubuntu.
 
-    -   cd /mnt/c/Users/Mauricio/Downloads
+    -   ```cd /mnt/c/Users/Mauricio/Downloads```
 
         -   Your Windows username is not the same as the Ubuntu username
             you previously created. You can find your Windows user name
@@ -172,22 +172,22 @@
                     an error message. For me, this looked something like
                     this:
 
-                    -   /mnt
+                    -   ```/mnt```
 
                         -   “Is a directory”
 
-                    -   /mnt/c
+                    -   ```/mnt/c```
 
                         -   “Is a directory”
 
-                    -   /mnt/c/Users
+                    -   ```/mnt/c/Users```
 
                         -   “Is a directory”
 
-                    -   /mnt/c/Users/Nate Hostetler
+                    -   ```/mnt/c/Users/Nate Hostetler```
 
-                        -   /mnt/c/Users/Nate: No such file or
-                            directory.
+                        -   ```/mnt/c/Users/Nate: No such file or
+                            directory.```
 
                 -   Now, I knew where the error was. Ubuntu recognized
                     everything until I entered my user’s name. I tried
@@ -221,7 +221,8 @@
 
 -   #### Now, copy and paste the following into Ubuntu and press enter.
 
-    -   ```sudo tar -zxvf freesurfer-linux-centos7_x86_64-7.1.1.tar.gz```
+    -   ```sudo tar -zxvf freesurfer-linux-ubuntu18_amd64-7.2.0.tar.gz```
+    
 
     -   If it copies into Ubuntu as “otar”, remove the o. It should only
         say tar.
@@ -234,10 +235,12 @@
     -   2\) ```pwd```
 
     -   3\) ```export FREESURFER_HOME=$HOME/freesurfer```
-            ```echo "export FREESURFER_HOME=/mnt/c/Users/Mauricio/Downloads/freesurfer >> $HOME/.bashrc```
-            
+            ```echo "export FREESURFER_HOME= >> /mnt/c/Users/Mauricio/Downloads/freesurfer/.bashrc```
+            ```echo "export DISPLAY=:0" >> /mnt/c/Users/Mauricio/Downloads/freesurfer/.bashrc ```
+            ```echo "export FREESURFER_HOME=/usr/local/freesurfer/7-dev" >> /mnt/c/Users/Mauricio/Downloads/freesurfer/.bashrc```
 
     -   4\) ```export SUBJECTS_DIR=$FREESURFER_HOME/subjects```
+            ```export SUBJECTS_DIR=$FREESURFER_HOME/subjects```
 
     -   5\) ```source $FREESURFER_HOME/SetUpFreeSurfer.sh```
 
