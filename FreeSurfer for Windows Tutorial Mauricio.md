@@ -241,8 +241,10 @@
 
     -   4\) ```export SUBJECTS_DIR=$FREESURFER_HOME/subjects```
             ```export SUBJECTS_DIR=$FREESURFER_HOME/subjects```
+            ```export SUBJECTS_DIR=\home\mauro\Documents\subjects```
 
     -   5\) ```source $FREESURFER_HOME/SetUpFreeSurfer.sh```
+         ```source $FREESURFER_HOME/SetUpFreeSurfer.sh```
 
 ### **Video 5 - Obtaining a FreeSurfer License [<u>https://youtu.be/1qA3uPUOBRU</u>](https://youtu.be/1qA3uPUOBRU)** 
 
@@ -325,6 +327,7 @@ and then try again.
 -   Copy and paste the following into Ubuntu, in order:
 
     -   1\) ```export SUBJECTS_DIR=$FREESURFER_HOME/subjects```
+              ```   export SUBJECTS_DIR=$HOME/Documents/subjects```
 
     -   2\) ```source $FREESURFER_HOME/SetUpFreeSurfer.sh```
 
