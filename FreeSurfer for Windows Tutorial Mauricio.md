@@ -86,7 +86,7 @@
 
     -   Do not accidentally include a space after the word “update”.
 
--   2\) Copy and paste this into Ubuntu.
+-   2\) Copy and paste this into Ubuntu. This will install libraries in the bash shell.
 
     -   ```sudo apt-get install tcsh libfreetype6 libglu1-mesa libfontconfig1 libxrender1 libsm6 libxt6```
 
@@ -226,6 +226,18 @@
 
     -   If it copies into Ubuntu as “otar”, remove the o. It should only
         say tar.
+or 
+paste 
+   ```wget https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/dev/freesurfer_7-dev_amd64.deb ```
+   pasted to download the freesufer to ubuntu 22
+   ```wget https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/7.4.1/freesurfer_ubuntu22-7.4.1_amd64.deb ```
+
+   directorio where there are image of freesurfers 
+   
+   ```https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/7.4.1/```
+
+instal the donwload image in ubuntu freesurfer_ubuntu22-7.4.1_amd64.deb
+   ```sudo apt-get install ./freesurfer_ubuntu22-7.4.1_amd64.deb```
 
 -   Each subsequent step represents a separate “copy + paste into
     Ubuntu”.
@@ -234,7 +246,27 @@
 
     -   2\) ```pwd```
 
-    -   3\) ```export FREESURFER_HOME=$HOME/freesurfer```
+    -   3\)  ```echo "export XDG_RUNTIME_DIR=$HOME/.xdg" >> $HOME/.bashrc ```
+    where   $HOME=/home/mauro2/, the result inside the .bashrc file is the append of a line in the end of the file .bashrc with this info. ="export XDG_RUNTIME_DIR=/home/mauro2/.xdg" necesary to for the display of freesurfer
+    ```echo "export DISPLAY=:0" >> $HOME/.bashrc```
+    ```echo "export FREESURFER_HOME=/usr/local/freesurfer/7.4.1" >> $HOME/.bashrc```
+    
+    Add your license file and set FS_LICENSE to point to it
+    ```echo "export FS_LICENSE=$HOME/license.txt" >> $HOME/.bashrc ```
+    ```echo "source /usr/local/freesurfer/7.4.1/SetUpFreeSurfer.sh" >> $HOME/.bashrc ```
+ 
+ logout and log back in and verify you see the following ...
+
+-------- freesurfer-linux-ubuntu22_x86_64-7.4.1-20230614-7eb8460 --------
+Setting up environment for FreeSurfer/FS-FAST (and FSL)
+FREESURFER_HOME   /usr/local/freesurfer/7.4.1
+FSFAST_HOME       /usr/local/freesurfer/7.4.1/fsfast
+FSF_OUTPUT_FORMAT nii.gz
+SUBJECTS_DIR      /usr/local/freesurfer/7.4.1/subjects
+INFO: /home/mauro2/matlab/startup.m does not exist ... creating
+MNI_DIR           /usr/local/freesurfer/7.4.1/mni
+
+            
             ```echo "export FREESURFER_HOME= >> /mnt/c/Users/Mauricio/Downloads/freesurfer/.bashrc```
             ```echo "export DISPLAY=:0" >> /mnt/c/Users/Mauricio/Downloads/freesurfer/.bashrc ```
             ```echo "export FREESURFER_HOME=/usr/local/freesurfer/7-dev" >> /mnt/c/Users/Mauricio/Downloads/freesurfer/.bashrc```
@@ -244,7 +276,7 @@
             ```export SUBJECTS_DIR=\home\mauro\Documents\subjects```
 
     -   5\) ```source $FREESURFER_HOME/SetUpFreeSurfer.sh```
-         ```source $FREESURFER_HOME/SetUpFreeSurfer.sh```
+            ```source $FREESURFER_HOME/SetUpFreeSurfer.sh```
 
 ### **Video 5 - Obtaining a FreeSurfer License [<u>https://youtu.be/1qA3uPUOBRU</u>](https://youtu.be/1qA3uPUOBRU)** 
 
