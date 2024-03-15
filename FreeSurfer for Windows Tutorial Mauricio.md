@@ -22,7 +22,7 @@
 
 -   Pathway:
 
-    -   1\) Click the “Start” button (windows logo) in the bottom left
+    -   1\) Click the “Start” button (Windows logo) in the bottom left
 
     -   2\) Press the gear on the left side of the screen to open
         settings
